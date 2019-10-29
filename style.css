@@ -1,0 +1,765 @@
+@charset "UTF-8";
+
+/*基本色*/
+:root {}
+
+/*基本設定：ページ全体*/
+body {
+	margin: 0;
+	font-family: 'メイリオ',
+		'Hiragino Kaku Gothic Pro',
+		sans-serif;
+
+}
+
+/*基本設定：フォントサイズ指定*/
+@media(max-width:599px) {
+
+	/*スマートフォン*/
+	:root {
+		font-size: 14px;
+	}
+}
+
+@media(min-width:600px)and(max-width:799px) {
+
+	/*タブレット*/
+	:root {
+		font-size: 16px;
+	}
+}
+
+@media(min-width:800px) {
+
+	/*web*/
+	:root {
+		font-size: 18px;
+	}
+}
+
+/*ヘッダー*/
+
+@media(min-width:768px) {}
+
+
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	width: 100%;
+	background-color: rgba(255, 255, 255, 1);
+	box-shadow: 0 6px 3px;
+	box-sizing: border-box;
+}
+
+header h1 {
+	font-weight: normal;
+	margin: 0;
+	display: inline-block;
+	line-height: 70px;
+	padding-left: 30px;
+	padding-right: 30px;
+	font-size: 36px;
+	text-decoration: none;
+}
+
+header h1 a {
+	text-decoration: none;
+	color: black;
+}
+
+header .container {
+	display: flex;
+	justify-content: space-between;
+
+}
+
+.menu-bar ul {
+	display: flex;
+
+}
+
+.menu-bar ul li {
+	list-style-type: none;
+	margin-left: 30px;
+	font-size: 24px;
+
+}
+
+.menu-bar ul li:hover {
+	border-bottom: 1px solid black;
+}
+
+.menu-bar ul li:last-child {
+	margin-right: 30px;
+}
+
+.menu-bar ul li a {
+	display: block;
+	text-decoration: none;
+	color: black;
+}
+
+/*ヒーロー*/
+
+.top-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-image: url(images/architectural-design-architecture-blue-sky-443378.jpg);
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+	margin-bottom: 0;
+}
+
+.top-wrapper h1 {
+	margin-top: 0;
+	margin-bottom: 10px;
+	font-size: 7vw;
+	font-family: 'Noto Sans JP', sans-serif;
+	color: white;
+}
+
+/*メッセージ
+
+
+.message-wrapper h2 {
+	font-weight: normal;
+	margin-top: 130px;
+	margin-bottom: 70px;
+	text-align: center;
+	font-size: 40px;
+}
+
+.message-wrapper .message-text {
+	max-width: 1000px;
+	text-align: left;
+	margin: 0 auto;
+	margin-bottom: 130px;
+}
+
+*/
+
+
+
+/*ニュース*/
+
+.news-wrapper {
+	margin-top: 0;
+	padding-bottom: 40px;
+	background-color: #F0F8FF;
+}
+
+.news-wrapper h2 {
+	font-weight: normal;
+	margin: 0;
+	padding-top: 50px;
+	font-size: 40px;
+	text-align: center;
+}
+
+.news-list dl {
+	display: inline-block;
+	margin: 10px 0 0 0;
+}
+
+.news-list dl dt {
+	display: inline-block;
+	padding: 10px;
+	color: white;
+	background-color: #495D63;
+	margin-left: 20px;
+}
+
+.news-list dl dd {
+	line-height: 47px;
+	border-bottom: 1px solid #F0F8FF;
+}
+
+.news-list dl dd:hover {
+	border-bottom: 1px solid black;
+}
+
+.news-list dl dd a {
+	text-decoration: none;
+	color: black;
+}
+
+.btn-more {
+	text-align: center;
+	display: block;
+	width: 200px;
+	margin: 0 auto;
+	padding: 10px 20px;
+	border: 1px solid black;
+	background-color: white;
+	color: black;
+	text-decoration: none;
+}
+
+.btn-more:hover {
+	text-decoration: underline black;
+}
+
+
+@media(min-width:768px) {
+	.news-list dl {
+		display: flex;
+		margin-bottom: 20px;
+	}
+
+	.news-wrapper h2 {
+		margin-top: 0;
+		text-align: center;
+		margin-bottom: 70px;
+	}
+
+	.news-wrapper .news-list {
+		width: 1000px;
+		margin: 0 auto;
+		padding-bottom: 50px;
+	}
+}
+
+/*メッセージ*/
+
+.message-wrapper .text {
+	padding-top: 20px;
+}
+
+.message-wrapper h2 {
+	text-align: center;
+	margin-top: 0;
+	margin-bottom: 10px;
+	font-size: 40px;
+	font-weight: normal;
+}
+
+.message-wrapper .photo {
+	width: 30vw;
+	min-height: 280px;
+	background-image: url(images/architecture-blue-sky-building-2323080.jpg);
+	background-position: center;
+	background-size: cover;
+}
+
+@media(min-width:768px) {
+	.message-wrapper .container {
+		margin-top: 100px;
+		display: flex;
+		flex-direction: row-reverse;
+		max-width: 1000px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.message-wrapper .photo {
+		flex: 0 0 400px;
+		margin-left: 50px;
+	}
+
+	.message-wrapper .text {
+		flex: 1;
+		padding: 20px;
+	}
+}
+
+/*事業紹介*/
+
+.service-wrapper {
+	padding-bottom: 50px;
+	background-color: #F0F8FF;
+}
+
+.service-wrapper h2 {
+	text-align: center;
+	font-size: 40px;
+	margin-top: 100px;
+	padding: 50px;
+	font-weight: normal;
+}
+
+.service-wrapper ul {
+	display: flex;
+	flex-wrap: wrap;
+	width: 1200px;
+	margin: 0 auto;
+	padding-bottom: 50px;
+}
+
+.service-wrapper ul li {
+	list-style-type: none;
+	position: relative;
+	margin: 10px;
+	padding: 0;
+}
+
+
+
+
+.service-wrapper p {
+	position: absolute;
+	top: 45%;
+	left: 210px;
+	color: white;
+	margin: 0;
+	padding: 0;
+	font-size: 30px;
+}
+
+.service-wrapper ul li img {
+	margin: 0;
+	padding: 0;
+	width: 550px;
+	height: 280px;
+	object-fit: cover;
+}
+
+
+
+
+/*------------------------------------------
+			事例紹介
+-------------------------------------------*/
+.project-wrapper {
+	margin-top: 100px;
+	margin-bottom: 100px;;
+}
+
+.project-wrapper h2 {
+	text-align: center;
+	font-size: 40px;
+	font-weight: normal;
+	margin-bottom: 80px;
+}
+
+.project-list ul {
+	max-width: 1200px;
+	margin: 0 auto 50px auto;
+	padding-left: 0;
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	list-style-type: none;
+}
+
+.project-list ul li {
+	text-align: center;
+	width: 20vw;
+	margin-left: 15px;
+}
+
+.project-list ul li p {
+	margin: 0;
+	padding-bottom: 5px;
+}
+
+
+.project-list h3 {
+	font-weight: normal;
+	color: black;
+}
+
+.project-list a {
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+	color: black;
+}
+
+.project-img {
+	width: 20vw;
+	height: 180px;
+	object-fit: cover;
+}
+
+.project-img:hover {
+	opacity: 0.7;
+}
+
+/*------------------------------------------
+			フッター
+-------------------------------------------*/
+footer {
+	color: white;
+	background-color: #14587C;
+}
+
+footer .container {
+	padding: 40px 20px;
+}
+
+.footA {
+	border-bottom: 30px;
+}
+
+.footA h2 {
+	margin-top: 0;
+	margin-bottom: 10px;
+	font-size: 30px;
+	font-weight: normal;
+}
+
+.footA p {
+	margin-top: 0;
+	margin-bottom: 20px;
+	font-size: 14px;
+}
+
+.footB h3 {
+	margin-top: 0;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #fff;
+	font-size: 14px;
+}
+
+.footB div {
+	margin-bottom: 20px;
+}
+
+.footB ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.footB ul li a {
+	display: block;
+	padding: 5px;
+	color: #fff;
+	font-size: 12px;
+	text-decoration: none;
+}
+
+.footB a:hover {
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+@media(min-width:768px) {
+	footer .container {
+		display: flex;
+		flex-wrap: wrap;
+		max-width: 1200px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	.footA {
+		flex: 0 0 40%;
+	}
+
+	.footB {
+		flex: 0 0 60%;
+		display: flex;
+	}
+
+	.copy-right {
+		flex: 0 0 100%;
+	}
+
+	.footB div {
+		flex: 1;
+	}
+
+	.footB div:not(:first-child) {
+		margin-left: 40px;
+	}
+}
+
+.copy-right {
+	text-align: center;
+}
+/*-------------------------------------------
+			個別ページ：会社案内
+--------------------------------------------*/
+.corp-top {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-image: url(images/architectural-design-architecture-blue-sky-443378.jpg);
+	background-size: cover;
+	height: 50vh;
+	min-height: 450px;
+	filter: grayscale(50%);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: right bottom
+}
+
+.corp-top h2 {
+	font-size: 40px;
+	color: white;
+	text-align: center;
+}
+
+/*タブパネル*/
+
+/*タブ切り替え全体のスタイル*/
+.corp-tabs {
+	padding-bottom: 40px;
+	background-color: #fff;
+	width: 1200px;
+	padding:0 20px 20px 20px;
+	margin: 0 auto;
+}
+
+/*タブのスタイル*/
+.corp-tab_item {
+	width:600px;
+	height: 100px;
+	border-bottom: 3px solid #14587C;
+	background-color: #d9d9d9;
+	line-height: 100px;
+	font-size: 24px;
+	text-align: center;
+	color: #565656;
+	display: block;
+	float: left;
+	text-align: center;
+	font-weight: normal;
+	transition: all 0.2s ease;
+  }
+
+  .corp-tab_item:hover {
+	opacity: 0.75;
+  }
+
+  /*タブ切り替えの中身のスタイル*/
+.corp-tab_content {
+	display: none;
+	padding: 40px 40px 0;
+	clear: both;
+	overflow: hidden;
+  }
+
+  /*ラジオボタンを全て消す*/
+input[name="corp-tab_item"] {
+	display: none;
+  }
+
+  /*選択されているタブのコンテンツのみを表示*/
+#top-message:checked ~ #top-message_content,
+#corp-about:checked ~ #corp-about_content
+ {
+  display: block;
+}
+
+/*選択されているタブのスタイルを変える*/
+.corp-tabs input:checked + .corp-tab_item {
+	background-color: #14587C;
+	color: #fff;
+  }
+
+
+
+
+
+/*-------------------------------------
+		個別ページ：事業紹介
+-------------------------------------------*/
+.service-top {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-image: url(images/architecture-building-city-439416.jpg);
+	background-size: cover;
+	height: 50vh;
+	min-height: 450px;
+	filter: grayscale(50%);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: right bottom
+}
+
+
+
+
+.service-top h2 {
+	font-size: 40px;
+	color: white;
+	text-align: center;
+}
+
+.service-button ul{
+	width:1000px;
+	margin:0 auto;
+	display:flex;
+	justify-content: space-evenly;
+}
+
+.service-button ul li{
+	background-color:white;
+	list-style-type: none;
+}
+
+.service-button ul li a{
+	text-decoration:none;
+	display: block;
+	color:black;
+	padding:15px;
+}
+
+.service-contents {
+	padding-top: 50px;
+	padding-bottom: 50px;;
+	background-color: #F0F8FF;
+}
+
+
+
+.service-contents ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	width: 1240px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.service-contents ul li {
+	list-style-type: none;
+	position: relative;
+	margin: 10px;
+	padding: 0;
+}
+
+.service-contents ul li a {
+	margin: 0;
+	padding: 0;
+}
+
+.service-contents ul li a:hover {
+	opacity: 0.6;
+}
+
+.service-contents p {
+	position: absolute;
+	top: 45%;
+	left: 210px;
+	color: white;
+	margin: 0;
+	padding: 0;
+	font-size: 30px;
+}
+
+.service-contents ul li img {
+	margin: 0;
+	padding: 0;
+	width: 550px;
+	height: 280px;
+	object-fit: cover;
+}
+
+.breadcrumb{
+	width:1200px;
+	padding: 20px;
+	margin:0 auto 50px auto;
+}
+
+.breadcrumb p{
+	float:left;
+}
+
+/*タブパネル*/
+
+/*タブ切り替え全体のスタイル*/
+.tabs {
+	padding-bottom: 40px;
+	background-color: #fff;
+	width: 1200px;
+	padding:0 20px 20px 20px;
+	margin: 0 auto;
+}
+
+/*タブのスタイル*/
+.tab_item {
+	width:300px;
+	height: 100px;
+	border-bottom: 3px solid #14587C;
+	background-color: #d9d9d9;
+	line-height: 100px;
+	font-size: 24px;
+	text-align: center;
+	color: #565656;
+	display: block;
+	float: left;
+	text-align: center;
+	font-weight: normal;
+	transition: all 0.2s ease;
+  }
+
+  .tab_item:hover {
+	opacity: 0.75;
+  }
+
+  /*タブ切り替えの中身のスタイル*/
+.tab_content {
+	display: none;
+	padding: 40px 40px 0;
+	clear: both;
+	overflow: hidden;
+  }
+
+  /*ラジオボタンを全て消す*/
+input[name="tab_item"] {
+	display: none;
+  }
+
+  /*選択されているタブのコンテンツのみを表示*/
+#private-arch:checked ~ #private-arch_content,
+#public-arch:checked ~ #public-arch_content,
+#public-construction:checked ~ #public-construction_content,
+#public-mt:checked ~ #public-mt_content {
+  display: block;
+}
+
+/*選択されているタブのスタイルを変える*/
+.tabs input:checked + .tab_item {
+	background-color: #14587C;
+	color: #fff;
+  }
+
+  
+.c-txtsp{
+	text-align: center;
+	font-size:34px;
+}
+
+#private-arch_content h2{
+	letter-spacing: 0.5em;
+}
+
+#private-arch_content h2,p {
+	margin:0;
+}
+
+#private-arch_content ul{
+	display: flex;
+}
+
+#private-arch_content ul li {
+	list-style-type: none;
+}
+
+#private-arch_content ul li img{
+	margin-left: 16px;
+	width:500px;
+	height:600px;
+	object-fit: cover;
+}
+
+/*-------------------------------------------
+			個別ページ：お問合せ
+--------------------------------------------*/
+
+.contact-form{
+	width:1200px;
+	padding:20px;
+	margin:0 auto;
+}
+
+
+
